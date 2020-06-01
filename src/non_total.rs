@@ -3,12 +3,9 @@
 /// # Examples
 ///
 /// ```
-/// # use probability_ghosts::non_total::binary_entropy;
-/// assert_eq!(binary_entropy(0.5), 1.0);
-/// ```
+/// use probability_ghosts::non_total::binary_entropy;
 ///
-/// ```
-/// # use probability_ghosts::non_total::binary_entropy;
+/// assert_eq!(binary_entropy(0.5), 1.0);
 /// assert_eq!(binary_entropy(0.0), 0.0);
 /// ```
 pub fn binary_entropy(p: f64) -> f64 {
@@ -40,13 +37,11 @@ fn information_content(p: f64) -> f64 {
 ///
 /// ```
 /// use probability_ghosts::non_total::{is_valid_probability, complement};
+///
 /// let half = 0.5;
 /// assert!(is_valid_probability(half));
 /// assert_eq!(complement(half), 0.5);
-/// ```
 ///
-/// ```
-/// use probability_ghosts::non_total::{is_valid_probability, complement};
 /// let two_thirds = 2.0 / 3.0;
 /// assert!(is_valid_probability(two_thirds));
 /// assert_eq!(complement(complement(two_thirds)), 2.0 / 3.0);
@@ -64,17 +59,10 @@ pub fn complement(p: f64) -> f64 {
 /// # Examples
 ///
 /// ```
-/// # use probability_ghosts::non_total::is_valid_probability;
+/// use probability_ghosts::non_total::is_valid_probability;
+///
 /// assert!(!is_valid_probability(f64::NAN));
-/// ```
-///
-/// ```
-/// # use probability_ghosts::non_total::is_valid_probability;
 /// assert!(!is_valid_probability(-1.0));
-/// ```
-///
-/// ```
-/// # use probability_ghosts::non_total::is_valid_probability;
 /// assert!(is_valid_probability(0.5));
 /// ```
 ///

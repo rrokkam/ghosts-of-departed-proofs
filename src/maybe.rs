@@ -3,17 +3,10 @@
 /// # Examples
 ///
 /// ```
-/// # use probability_ghosts::maybe::binary_entropy;
+/// use probability_ghosts::maybe::binary_entropy;
+///
 /// assert_eq!(binary_entropy(0.5), Some(1.0));
-/// ```
-///
-/// ```
-/// # use probability_ghosts::maybe::binary_entropy;
 /// assert_eq!(binary_entropy(0.0), Some(0.0));
-/// ```
-///
-/// ```
-/// # use probability_ghosts::maybe::binary_entropy;
 /// assert_eq!(binary_entropy(2.0), None);
 /// ```
 ///
@@ -39,14 +32,11 @@ fn information_content(p: f64) -> f64 {
 ///
 /// ```
 /// use probability_ghosts::maybe::{to_probability, complement};
+///
 /// let half = to_probability(0.5).unwrap();
-/// assert_eq!(complement(half).unwrap(), 0.5)
-/// ```
+/// assert_eq!(complement(half).unwrap(), 0.5);
 ///
-/// ```
-/// use probability_ghosts::maybe::{to_probability, complement};
 /// let two_thirds = to_probability(2.0 / 3.0).unwrap();
-///
 /// assert_eq!(complement(complement(two_thirds).unwrap()).unwrap(), 2.0 / 3.0);
 /// ```
 ///
@@ -60,17 +50,10 @@ pub fn complement(p: f64) -> Option<f64> {
 /// # Examples
 ///
 /// ```
-/// # use probability_ghosts::maybe::to_probability;
+/// use probability_ghosts::maybe::to_probability;
+///
 /// assert_eq!(to_probability(f64::NAN), None);
-/// ```
-///
-/// ```
-/// # use probability_ghosts::maybe::to_probability;
 /// assert_eq!(to_probability(-1.0), None);
-/// ```
-///
-/// ```
-/// # use probability_ghosts::maybe::to_probability;
 /// assert_eq!(to_probability(0.5), Some(0.5));
 /// ```
 ///
