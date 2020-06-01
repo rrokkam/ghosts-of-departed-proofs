@@ -18,8 +18,9 @@
 /// ```
 ///
 pub fn binary_entropy(p: f64) -> Option<f64> {
-    let probability = to_probability(p)?;
-    Some(information_content(p) + information_content(1.0 - p))
+    let prob = to_probability(p)?;
+    let comp_prob = to_probability(1.0-p)?
+    Some(information_content(prob) + information_content(comp_prob))
 }
 
 fn information_content(p: f64) -> f64 {
