@@ -12,7 +12,7 @@
 /// assert_eq!(binary_entropy(0.0), 0.0);
 /// ```
 pub fn binary_entropy(p: f64) -> f64 {
-    if !is_valid_probability(p) {
+    if !is_valid_probability(p) || !is_valid_probability(1.0 - p) {
         panic!("Probability not between 0 or 1");
     }
 
