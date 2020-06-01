@@ -33,7 +33,7 @@ fn information_content(p: f64) -> f64 {
     -p * f64::log2(p)
 }
 
-fn complement(p: f64) -> f64 {
+pub fn complement(p: f64) -> f64 {
     if !is_valid_probability(p) {
         panic!("Probability not between 0 or 1");
     }

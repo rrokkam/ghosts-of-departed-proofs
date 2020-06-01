@@ -32,6 +32,23 @@ fn information_content(p: f64) -> f64 {
     -p * f64::log2(p)
 }
 
+/// Returns a Probability representing the complement of this probability (ie. 1 - p)
+///
+/// # Examples
+///
+/// ```
+/// use probability_ghosts::maybe::{to_probability, complement};
+/// let half = to_probability(0.5).unwrap();
+/// assert_eq!(complement(half).unwrap(), 0.5)
+/// ```
+///
+/// ```
+/// use probability_ghosts::maybe::{to_probability, complement};
+/// let two_thirds = to_probability(2.0 / 3.0).unwrap();
+///
+/// assert_eq!(complement(complement(two_thirds).unwrap()).unwrap(), 2.0 / 3.0);
+/// ```
+///
 pub fn complement(p: f64) -> Option<f64> {
     let prob = to_probability(p)?;
     Some(1.0 - prob)
