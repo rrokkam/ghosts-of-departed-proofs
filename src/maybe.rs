@@ -32,7 +32,8 @@ fn information_content(p: f64) -> f64 {
     -p * f64::log2(p)
 }
 
-/// Returns a Probability representing the complement of this probability (ie. 1 - p)
+/// Returns an Option representing the complement of this probability (ie. 1 - p) if valid.
+/// Returns None if the argument given is not in [0, 1].
 ///
 /// # Examples
 ///

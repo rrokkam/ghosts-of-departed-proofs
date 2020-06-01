@@ -1,5 +1,6 @@
 use std::convert::TryFrom;
 
+/// Struct representing a probability in [0, 1].
 pub struct Probability {
     p: f64,
 }
