@@ -19,7 +19,7 @@
 ///
 pub fn binary_entropy(p: f64) -> Option<f64> {
     let prob = to_probability(p)?;
-    let comp_prob = to_probability(1.0-p)?
+    let comp_prob = complement(prob)?;
     Some(information_content(prob) + information_content(comp_prob))
 }
 
@@ -30,6 +30,11 @@ fn information_content(p: f64) -> f64 {
     }
 
     -p * f64::log2(p)
+}
+
+pub fn complement(p: f64) -> Option<f64> {
+    let prob = to_probability(p)?;
+    Some(1.0 - prob)
 }
 
 /// True iff p is in [0, 1].
