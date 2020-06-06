@@ -3,7 +3,7 @@
 /// # Examples
 ///
 /// ```
-/// use probability_ghosts::non_total::binary_entropy;
+/// use ghosts_of_departed_proofs::non_total::binary_entropy;
 ///
 /// assert_eq!(binary_entropy(0.5), 1.0);
 /// assert_eq!(binary_entropy(0.0), 0.0);
@@ -36,7 +36,7 @@ fn information_content(p: f64) -> f64 {
 /// # Examples
 ///
 /// ```
-/// use probability_ghosts::non_total::{is_valid_probability, complement};
+/// use ghosts_of_departed_proofs::non_total::{is_valid_probability, complement};
 ///
 /// let half = 0.5;
 /// assert!(is_valid_probability(half));
@@ -59,7 +59,7 @@ pub fn complement(p: f64) -> f64 {
 /// # Examples
 ///
 /// ```
-/// use probability_ghosts::non_total::is_valid_probability;
+/// use ghosts_of_departed_proofs::non_total::is_valid_probability;
 ///
 /// assert!(!is_valid_probability(f64::NAN));
 /// assert!(!is_valid_probability(-1.0));

@@ -3,7 +3,7 @@
 /// # Examples
 ///
 /// ```
-/// use probability_ghosts::maybe::binary_entropy;
+/// use ghosts_of_departed_proofs::maybe::binary_entropy;
 ///
 /// assert_eq!(binary_entropy(0.5), Some(1.0));
 /// assert_eq!(binary_entropy(0.0), Some(0.0));
@@ -31,7 +31,7 @@ fn information_content(p: f64) -> f64 {
 /// # Examples
 ///
 /// ```
-/// use probability_ghosts::maybe::{to_probability, complement};
+/// use ghosts_of_departed_proofs::maybe::{to_probability, complement};
 ///
 /// let half = to_probability(0.5).unwrap();
 /// assert_eq!(complement(half).unwrap(), 0.5);
@@ -50,7 +50,7 @@ pub fn complement(p: f64) -> Option<f64> {
 /// # Examples
 ///
 /// ```
-/// use probability_ghosts::maybe::to_probability;
+/// use ghosts_of_departed_proofs::maybe::to_probability;
 ///
 /// assert_eq!(to_probability(f64::NAN), None);
 /// assert_eq!(to_probability(-1.0), None);

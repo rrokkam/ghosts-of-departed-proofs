@@ -11,7 +11,7 @@ impl Probability {
     /// # Examples
     ///
     /// ```
-    /// use probability_ghosts::naive_ghosts::Probability;
+    /// use ghosts_of_departed_proofs::naive_ghosts::Probability;
     /// use std::convert::TryFrom;
     ///
     /// let prob = Probability::try_from(0.5).unwrap();
@@ -42,7 +42,7 @@ impl Probability {
     /// # Examples
     ///
     /// ```
-    /// use probability_ghosts::naive_ghosts::Probability;
+    /// use ghosts_of_departed_proofs::naive_ghosts::Probability;
     /// use std::convert::TryFrom;
     ///
     /// let half = Probability::try_from(0.5).unwrap();
@@ -65,7 +65,7 @@ impl TryFrom<f64> for Probability {
     /// # Examples
     ///
     /// ```
-    /// use probability_ghosts::naive_ghosts::Probability;
+    /// use ghosts_of_departed_proofs::naive_ghosts::Probability;
     /// use std::convert::TryFrom;
     ///
     /// assert!(Probability::try_from(f64::NAN).is_err());
